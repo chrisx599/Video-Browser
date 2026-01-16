@@ -32,7 +32,7 @@ planner:
 
 cache:
   enabled: true
-  base_dir: "/home/zhengyangliang/VideoBrowser/data/cache"
+  base_dir: "data/cache"
 
 search:
   text_search_provider: null # "tavily" | "serper" | "duckduckgo" | null
