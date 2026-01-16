@@ -156,7 +156,7 @@ def analyst_node(state: AgentState):
     # we just need the instruction text at the end.
     
     instruction_text = load_prompt(
-        "jit_analyst.j2",
+        "analyst_report.j2",
         user_query=user_query,
         video_context=[] # We passed context via content_parts
     )
