@@ -2,6 +2,18 @@
 
 VideoBrowser is an autonomous AI agent designed to research, watch, and analyze video content to answer complex user queries. It implements the **Pyramidal Perception** for efficient video understanding.
 
+<p align="center">
+    <a href="https://liang-zhengyang.github.io/video-browsecomp/" target="_blank">
+        <img src="https://img.shields.io/badge/🏠-Project_Page-orange.svg" alt="Project Page">
+    </a>
+    <a href="https://arxiv.org/abs/2512.23044" target="_blank">
+        <img src="https://img.shields.io/badge/📄-Paper-brightgreen.svg" alt="Paper">
+    </a>
+    <a href="https://huggingface.co/datasets/chr1ce/Video-Browsecomp" target="_blank">
+        <img src="https://img.shields.io/badge/📊-Benchmark-yellow.svg" alt="Benchmark">
+    </a>
+</p>
+
 ## 🚀 Quick Start
 
 ### 1. Installation
