@@ -80,7 +80,9 @@ async def main(message: cl.Message):
 
             # --- 2.6 Analyst Node (Final Answer) ---
             elif node_name == "analyst":
-                await handle_analyst(node_state)
+                # Fetch full state to access video_store (which is not in analyst output delta)
+                snapshot = graph.get_state(config)
+                await handle_analyst(snapshot.values)
 
 
 # ==============================================================================
@@ -196,6 +198,5 @@ async def handle_analyst(state: dict):
             if sources_text:
                 await cl.Message(
                     content=f"**Sources Used:**\n{sources_text}", 
-                    author="System",
-                    collapse_open=False
+                    author="System"
                 ).send()
