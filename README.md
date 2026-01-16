@@ -14,6 +14,10 @@ VideoBrowser is an autonomous AI agent designed to research, watch, and analyze 
     </a>
 </p>
 
+<p align="center">
+  <img src="assets/cover.jpeg" align="center" width="90%">
+</p>
+
 ## 🚀 Quick Start
 
 ### 1. Installation
@@ -82,6 +86,16 @@ python run_cli.py
 
 *Note: By default, this runs a demo query defined in the script. Open `run_cli.py` and modify the `inputs` dictionary to change the question.*
 
+### 6. Running the Web UI
+
+To use the interactive Chat UI (powered by Chainlit):
+
+```bash
+chainlit run app.py
+```
+This will start a local server at `http://localhost:8000`. You can interact with the agent just like a chat application.
+
+
 
 ## 📚 Citation
 
@@ -102,3 +116,6 @@ If you use the videobrowser in your research, please cite:
 ## 📄 License
 
 [MIT License](LICENSE)
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=chrisx599/Video-Browser&type=Date)](https://star-history.com/#chrisx599/Video-Browser&Date)
