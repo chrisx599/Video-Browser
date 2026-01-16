@@ -1,19 +1,10 @@
-# VideoBrowser: JIT Video Understanding Agent
+# Video-Browser: Towards Agentic Open-web Video Browsing
 
-VideoBrowser is an autonomous AI agent designed to research, watch, and analyze video content (primarily YouTube) to answer complex user queries. It implements the **Just-In-Time (JIT) Paradigm** for efficient video understanding, as described in **[Video-JIT: A Just-In-Time Paradigm for Video-Based Agentic Retrieval](https://arxiv.org/abs/2512.23044)**.
+VideoBrowser is an autonomous AI agent designed to research, watch, and analyze video content to answer complex user queries. It implements the **Pyramidal Perception** for efficient video understanding.
 
 ## 🚀 Quick Start
 
-### 1. Prerequisites
-
-Ensure you have the following installed:
-*   **Python 3.10+**
-*   **FFmpeg**: Required for video and audio processing.
-    *   *Ubuntu/Debian*: `sudo apt install ffmpeg`
-    *   *MacOS*: `brew install ffmpeg`
-    *   *Windows*: Download from [ffmpeg.org](https://ffmpeg.org/download.html) and add to PATH.
-
-### 2. Installation
+### 1. Installation
 
 Clone the repository and install dependencies:
 
@@ -22,15 +13,17 @@ git clone https://github.com/your-username/Video-Browser.git
 cd Video-Browser
 
 # Recommended: Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+conda create -n videobrowser python=3.10
+conda activate videobrowser
 
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ### 3. Environment Setup
 
 Create a `.env` file in the project root to store your API keys:
+cp .env.example .env
 
 ```ini
 # .env file
@@ -72,27 +65,25 @@ transcript:
 You can run the agent using the graph builder script:
 
 ```bash
-python videobrowser/graph/builder.py
+python run_cli.py
 ```
 
-*Note: By default, this runs a demo query defined in the script. Open `videobrowser/graph/builder.py` and modify the `inputs` dictionary to change the question.*
+*Note: By default, this runs a demo query defined in the script. Open `run_cli.py` and modify the `inputs` dictionary to change the question.*
 
-```python
-# In videobrowser/graph/builder.py
-inputs = {"user_query": "Your custom question here..."}
-```
 
 ## 📚 Citation
 
-If you use this codebase or the JIT paradigm in your research, please cite:
+If you use the videobrowser in your research, please cite:
 
 ```bibtex
-@article{VideoJIT2025,
-  title={Video-JIT: A Just-In-Time Paradigm for Video-Based Agentic Retrieval},
-  author={Zhengyang Liang and others},
-  journal={arXiv preprint arXiv:2512.23044},
-  year={2025},
-  url={https://arxiv.org/abs/2512.23044}
+@misc{liang2025videobrowsecompbenchmarkingagenticvideo,
+      title={Video-BrowseComp: Benchmarking Agentic Video Research on Open Web}, 
+      author={Zhengyang Liang and Yan Shu and Xiangrui Liu and Minghao Qin and Kaixin Liang and Paolo Rota and Nicu Sebe and Zheng Liu and Lizi Liao},
+      year={2025},
+      eprint={2512.23044},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.23044}, 
 }
 ```
 
