@@ -1,0 +1,31 @@
+You are a video investigator.
+User Query: "{{ user_query }}"
+
+Video Title: {{ video_title }}
+
+I have sampled {{ num_frames }} frames from the video at specific timestamps:
+{{ frame_descriptions }}
+
+Transcript (with timestamps):
+{{ transcript }}
+
+Task:
+Identify all specific temporal windows (start_time to end_time) in the video that are relevant to answering the User Query.
+- Combine visual cues from the frames and semantic cues from the transcript.
+- If the answer is in the transcript, use its timestamps.
+- If the answer is visual, use the frame timestamps to estimate the window.
+- If the video is irrelevant, return an empty list or set relevant to false.
+- Provide a brief reasoning for each selected window. 
+
+Output Format (JSON):
+{
+    "relevant": true/false,
+    "windows": [
+        {
+            "start_time_seconds": <float>,
+            "end_time_seconds": <float>,
+            "reasoning": "..."
+        },
+        ...
+    ]
+}

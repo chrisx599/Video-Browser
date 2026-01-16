@@ -1,0 +1,10 @@
+User Query: "{{ user_query }}"
+
+You are provided with a list of video search results. 
+Select the top {{ top_k }} most relevant videos that are likely to contain the answer to the User Query.
+
+Candidates:
+{{ candidates_info }}
+
+Return the indices of the selected videos as a JSON list of integers.
+Example: [0, 2, 4]
